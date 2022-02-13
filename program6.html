@@ -32,18 +32,16 @@
         }
         document.write("<tr>");
         while (day <= month_len) {
-            for (var i = 1; i <= 7 && day <= month_len; i++) {
+            for (var i = 1; i <= 7 && day <= month_len; i++, day+=1) {
                 document.write("<td align=center bgcolor=silver>" + day + "</td>");
-                day++;
             }
             document.write("<tr>");
-            start_day = i;
+             start_day = i;
         }
         document.write("</tr></table>");
     }
     year = prompt("enter 4 digit year ", 2021);
-    today = new Date("January 1, " + year);
-    start_day = today.getDay() + 1;
+    start_day = new Date("January 1, " + year).getDay() +1
     fill_table("January", 31);
     if (year % 4 == 0)
         fill_table("February", 29);

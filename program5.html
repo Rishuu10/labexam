@@ -2,13 +2,13 @@
 <head>
     <title>Form Validation</title>
     <script>
-        var divs = new Array();
-        divs[0] = "errFirst";
-        divs[1] = "errLast";
-        divs[2] = "errEmail";
-        divs[3] = "errUid";
-        divs[4] = "errPassword";
-        divs[5] = "errConfirm";
+        var divs = [
+        "errFirst"
+        ,"errLast"
+        ,"errEmail"
+        ,"errUid"
+        ,"errPassword"
+        ,"errConfirm"]
         function validate() {
             var inputs = new Array();
             inputs[0] = document.getElementById('first').value;
@@ -63,7 +63,7 @@
 </head>
 
 <body>
-    <table id="table1">
+    <table>
         <tr>
             <td>First Name:</td>
             <td><input type="text" id="first" onkeyup="validate();" /></td>
